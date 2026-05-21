@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casting — Backstab</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__brand" aria-label="Backstab home">
+      <img src="assets/backstab-mark.png" alt="" class="nav__mark" />
+      <span class="nav__wordmark">Backstab</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html" class="nav__link">Home</a></li>
+      <li><a href="socials.html" class="nav__link">Socials</a></li>
+      <li><a href="casting.html" class="nav__link nav__link--active">Casting</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <div class="page__heading">
+      <span class="section-heading__eyebrow">Apply to Play</span>
+      <h1 class="page__title">Casting</h1>
+      <div class="divider"></div>
+      <p class="page__subtitle">Your journey starts here.</p>
+    </div>
+
+    <!-- Progress indicator -->
+    <div class="progress" role="progressbar" aria-label="Application progress">
+      <div class="progress__step progress__step--active" data-step="1">
+        <span class="progress__num">I</span>
+        <span class="progress__label">Eligibility</span>
+      </div>
+      <div class="progress__line"></div>
+      <div class="progress__step" data-step="2">
+        <span class="progress__num">II</span>
+        <span class="progress__label">Information</span>
+      </div>
+      <div class="progress__line"></div>
+      <div class="progress__step" data-step="3">
+        <span class="progress__num">III</span>
+        <span class="progress__label">Audition</span>
+      </div>
+    </div>
+
+    <!-- IMPORTANT: Replace YOUR_ACCESS_KEY_HERE with the Web3Forms key from web3forms.com -->
+    <form id="castingForm" class="form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="a96ab17f-2fed-4e69-b858-0013360088f7" />
+      <input type="hidden" name="subject" value="New Backstab Casting Application" />
+      <input type="hidden" name="from_name" value="Backstab Casting" />
+      <input type="checkbox" name="botcheck" style="display:none" />
+
+      <!-- STEP 1: ELIGIBILITY -->
+      <section class="form-step form-step--active" data-step="1">
+        <h2 class="form-step__title">Eligibility</h2>
+        <p class="form-step__intro">Before you proceed, you must meet every requirement below.</p>
+
+        <ul class="requirements">
+          <li class="requirement">
+            <span class="requirement__bullet" aria-hidden="true">✦</span>
+            <span><strong>You are 16 years of age or older.</strong></span>
+          </li>
+          <li class="requirement">
+            <span class="requirement__bullet" aria-hidden="true">✦</span>
+            <span><strong>You have a stable internet connection.</strong> Disconnects mid-game can compromise the entire cast.</span>
+          </li>
+          <li class="requirement">
+            <span class="requirement__bullet" aria-hidden="true">✦</span>
+            <span><strong>You have a PC, laptop, or device with a working camera and microphone.</strong> Built-in laptop mics are acceptable provided audio quality is clear.</span>
+          </li>
+          <li class="requirement">
+            <span class="requirement__bullet" aria-hidden="true">✦</span>
+            <span><strong>You can play from a quiet, well-lit environment</strong> for the full duration without interruption.</span>
+          </li>
+          <li class="requirement">
+            <span class="requirement__bullet" aria-hidden="true">✦</span>
+            <span><strong>You have the desktop version of Discord installed</strong> (not browser, not mobile) and an account in good standing.</span>
+          </li>
+          <li class="requirement">
+            <span class="requirement__bullet" aria-hidden="true">✦</span>
+            <span><strong>You are comfortable being recorded</strong> and having your footage published publicly on YouTube.</span>
+          </li>
+          <li class="requirement">
+            <span class="requirement__bullet" aria-hidden="true">✦</span>
+            <span><strong>You bring the spirit of the game.</strong> Scheming, betrayal, and respectful drama are all encouraged.</span>
+          </li>
+          <li class="requirement">
+            <span class="requirement__bullet" aria-hidden="true">✦</span>
+            <span><strong>You can commit to the full production window.</strong> Shoots run between 3:00 PM and 8:00 PM Eastern, with standard call time at 7:00 PM ET. Players arrive 30 minutes before game start. Expect 2.5 to 3 hours per game.</span>
+          </li>
+          <li class="requirement">
+            <span class="requirement__bullet" aria-hidden="true">✦</span>
+            <span><strong>You agree to sign a standard release</strong> before filming, granting permission to publish your appearance.</span>
+          </li>
+        </ul>
+
+        <label class="checkbox">
+          <input type="checkbox" name="eligibility_confirmed" required />
+          <span class="checkbox__box" aria-hidden="true"></span>
+          <span class="checkbox__text">I confirm I meet every requirement above.</span>
+        </label>
+
+        <div class="form-step__actions form-step__actions--single">
+          <button type="button" class="btn btn--primary" data-next="2">Continue →</button>
+        </div>
+      </section>
+
+      <!-- STEP 2: BASIC INFORMATION -->
+      <section class="form-step" data-step="2">
+        <h2 class="form-step__title">Your Information</h2>
+        <p class="form-step__intro">The basics. We use this to contact you and confirm scheduling.</p>
+
+        <div class="form-grid">
+          <label class="field">
+            <span class="field__label">Full Name</span>
+            <input type="text" name="full_name" required />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Discord Username</span>
+            <input type="text" name="discord_username" placeholder="e.g. username or username#0000" required />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Email Address</span>
+            <input type="email" name="email" required />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Phone Number</span>
+            <input type="tel" name="phone" required />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Age</span>
+            <input type="number" name="age" min="16" max="120" required />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Pronouns</span>
+            <input type="text" name="pronouns" placeholder="optional" />
+          </label>
+
+          <label class="field">
+            <span class="field__label">City</span>
+            <input type="text" name="city" required />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Province / State</span>
+            <input type="text" name="province_state" required />
+          </label>
+
+          <label class="field field--full">
+            <span class="field__label">Country</span>
+            <input type="text" name="country" required />
+          </label>
+
+          <label class="field field--full">
+            <span class="field__label">Time Zone</span>
+            <input type="text" name="timezone" placeholder="e.g. Eastern, Pacific, GMT+0" required />
+          </label>
+        </div>
+
+        <div class="form-step__actions">
+          <button type="button" class="btn btn--ghost" data-prev="1">← Back</button>
+          <button type="button" class="btn btn--primary" data-next="3">Continue →</button>
+        </div>
+      </section>
+
+      <!-- STEP 3: AUDITION VIDEO -->
+      <section class="form-step" data-step="3">
+        <h2 class="form-step__title">The Audition</h2>
+        <p class="form-step__intro">This is where we meet you.</p>
+
+        <div class="audition-brief">
+          <p>Record a video between <strong>2 and 3 minutes long</strong> using the <em>exact setup</em> you intend to play the game with. Use the same camera, same mic, same lighting, same room, etc.</p>
+          <p>We're looking for people who <strong>pop on camera</strong>: energy, presence, charisma, opinions. Tell us who you are, why you want to play, and what kind of player you'd be. Be entertaining. Be honest. Be specific.</p>
+          <p>Backstab is committed to casting a diverse, intersectional group of players. Every background, identity, and perspective is welcome and encouraged.</p>
+          <p class="audition-brief__note">Upload your video to YouTube (unlisted), Google Drive, Dropbox, or any platform that produces a shareable link. Paste the link below.</p>
+        </div>
+
+        <label class="field field--full">
+          <span class="field__label">Audition Video Link</span>
+          <input type="url" name="audition_link" placeholder="https://..." required />
+        </label>
+
+        <label class="field field--full">
+          <span class="field__label">Anything else we should know? <span class="field__optional">(optional)</span></span>
+          <textarea name="additional_notes" rows="5" placeholder="Schedule constraints, accessibility needs, or any other logistics we should know about..."></textarea>
+        </label>
+
+        <div class="form-step__actions">
+          <button type="button" class="btn btn--ghost" data-prev="2">← Back</button>
+          <button type="submit" class="btn btn--primary btn--submit">Submit Application</button>
+        </div>
+      </section>
+
+      <!-- SUCCESS STATE -->
+      <section class="form-step form-success" data-step="success">
+        <div class="form-success__mark" aria-hidden="true">
+          <img src="assets/backstab-mark.png" alt="" />
+        </div>
+        <h2 class="form-step__title">Application Received</h2>
+        <p class="form-step__intro">Thank you for applying. We review every application personally. If you're a fit, you'll hear from us at the email address you provided.</p>
+        <p class="form-step__intro" style="font-style: italic; opacity: 0.7;">Until then — trust no one.</p>
+        <a href="index.html" class="btn btn--ghost">Return Home</a>
+      </section>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">© <span id="year"></span> Backstab Gameshow. All deceptions reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Multi-step form logic
+    const steps = document.querySelectorAll('.form-step');
+    const progressSteps = document.querySelectorAll('.progress__step');
+    const form = document.getElementById('castingForm');
+
+    function goToStep(stepNum) {
+      steps.forEach(s => s.classList.remove('form-step--active'));
+      const target = document.querySelector(`.form-step[data-step="${stepNum}"]`);
+      if (target) target.classList.add('form-step--active');
+
+      progressSteps.forEach(p => {
+        const n = parseInt(p.dataset.step);
+        p.classList.remove('progress__step--active', 'progress__step--complete');
+        if (stepNum === 'success' || n < (stepNum === 'success' ? 4 : parseInt(stepNum))) {
+          p.classList.add('progress__step--complete');
+        } else if (n === parseInt(stepNum)) {
+          p.classList.add('progress__step--active');
+        }
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Next buttons (with validation)
+    document.querySelectorAll('[data-next]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const currentStep = btn.closest('.form-step');
+        const inputs = currentStep.querySelectorAll('input[required], textarea[required]');
+        let valid = true;
+        inputs.forEach(input => {
+          if (!input.checkValidity()) {
+            input.reportValidity();
+            valid = false;
+          }
+        });
+        if (valid) goToStep(btn.dataset.next);
+      });
+    });
+
+    // Back buttons
+    document.querySelectorAll('[data-prev]').forEach(btn => {
+      btn.addEventListener('click', () => goToStep(btn.dataset.prev));
+    });
+
+    // Form submission (AJAX to avoid page redirect)
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = form.querySelector('.btn--submit');
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+        });
+        const result = await response.json();
+        if (result.success) {
+          goToStep('success');
+        } else {
+          alert('Something went wrong. Please try again or email us directly at backstabgameshow@gmail.com');
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
+      } catch (err) {
+        alert('Something went wrong. Please try again or email us directly at backstabgameshow@gmail.com');
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backstab — Loyalty is a Liability</title>
+  <meta name="description" content="Backstab is a Discord-based social strategy gameshow. Loyalty is a liability." />
+  <link rel="icon" type="image/png" href="assets/backstab-mark.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__brand" aria-label="Backstab home">
+      <img src="assets/backstab-mark.png" alt="" class="nav__mark" />
+      <span class="nav__wordmark">Backstab</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
+      <li><a href="socials.html" class="nav__link">Socials</a></li>
+      <li><a href="casting.html" class="nav__link">Casting</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero__ornament hero__ornament--top" aria-hidden="true"></div>
+      <p class="hero__welcome">Welcome to</p>
+      <img src="assets/backstab-logo.png" alt="Backstab" class="hero__logo" />
+      <h1 class="hero__title">Backstab</h1>
+      <p class="hero__tagline">Loyalty is a liability.</p>
+      <div class="hero__ornament hero__ornament--bottom" aria-hidden="true"></div>
+    </section>
+
+    <section class="video-section">
+      <div class="section-heading">
+        <span class="section-heading__eyebrow">The Premise</span>
+        <h2 class="section-heading__title">How to Play</h2>
+      </div>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/8tZRFYnSZ58"
+          title="How to play Backstab"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">© <span id="year"></span> Backstab Gameshow. All deceptions reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
